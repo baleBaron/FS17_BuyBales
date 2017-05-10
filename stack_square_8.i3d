@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.0"/>
+  </Asset>
+
+  <Files>
+  </Files>
+
+
+  <Materials>
+    <Material name="UnnamedMaterial" materialId="6" diffuseColor="1 1 1 1" ambientColor="1 1 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="stack_square_8.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="stack_obj" dynamic="true" collisionMask="24" density="0.5" clipDistance="300" nodeId="9" materialIds="6" nonRenderable="true">
+      <TransformGroup name="stack_indices" clipDistance="300" minClipDistance="50" nodeId="10">
+        <TransformGroup name="slice0" translation="0 0.1 0" nodeId="11">
+          <TransformGroup name="first" translation="-0.6 0 0" nodeId="12"/>
+          <TransformGroup name="second" translation="0.6 0 0" nodeId="13"/>
+        </TransformGroup>
+        <TransformGroup name="slice1" translation="0 1 0" nodeId="14">
+          <TransformGroup name="first" translation="-0.6 0 0" nodeId="15"/>
+          <TransformGroup name="second" translation="0.6 0 0" nodeId="16"/>
+        </TransformGroup>
+        <TransformGroup name="slice2" translation="0 1.9 0" nodeId="17">
+          <TransformGroup name="first" translation="-0.6 0 0" nodeId="18"/>
+          <TransformGroup name="second" translation="0.6 0 0" nodeId="19"/>
+        </TransformGroup>
+        <TransformGroup name="slice3" translation="0 2.8 0" nodeId="20">
+          <TransformGroup name="first" translation="-0.6 0 0" nodeId="21"/>
+          <TransformGroup name="second" translation="0.6 0 0" nodeId="22"/>
+        </TransformGroup>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

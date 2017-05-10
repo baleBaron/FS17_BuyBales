@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="30">
+
+    <author>baron</author>
+    <version>1.17 beta</version>
+	
+    <title>
+		<en>BuyBales</en>
+		<de>KaufenBallen</de>
+    </title>
+	
+    <description>
+		<en><![CDATA[Enables you to pruchase bales at the store.]]></en>
+		<de><![CDATA[Hiermit können Sie Ballen im Laden zu kaufen.]]></de>
+    </description>
+
+    <iconFilename>
+		<en>textures/store.dds</en>
+		<de>textures/store.dds</de>
+    </iconFilename>	
+	
+    <multiplayer supported="true"/>
+	
+	<l10n>
+		<text name="function_bale_stack">
+            <en>Stack of bales delivered to the store.</en>
+			<de>Stapel von Ballen in den Laden geliefert.</de>
+        </text>
+	</l10n>
+	
+	<inputBindings>
+    </inputBindings>
+
+	<specializations>
+		<specialization name="bale_spawner" className="BaleSpawner" filename="scripts/balespawn.lua" />
+	</specializations>
+	
+	<vehicleTypes>
+		<type name="bale_stack" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="bale_spawner" />
+		</type>
+	</vehicleTypes>
+	
+	<storeItems>
+        <storeItem rootNode="stack_obj" xmlFilename="stack_square_8_straw.xml" />
+		<storeItem rootNode="stack_obj" xmlFilename="stack_round_8_straw.xml" />
+		<storeItem rootNode="stack_obj" xmlFilename="stack_square_8_hay.xml" />
+		<storeItem rootNode="stack_obj" xmlFilename="stack_round_8_hay.xml" />
+		<storeItem rootNode="stack_obj" xmlFilename="stack_round_8_silage.xml" />
+	</storeItems>
+	
+</modDesc>

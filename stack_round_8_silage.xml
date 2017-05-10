@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="bale_stack">
+
+	<storeData>
+		<name>
+			<en>Stack of silage bales</en>
+			<de>Stapel von silageballen</de>
+		</name>
+		<functions>
+			<function>$l10n_function_bale_stack</function>
+		</functions>
+		<specs>
+			<fillTypes>silage</fillTypes>
+			<capacity unit="$l10n_unit_liter">8x4000</capacity>
+		</specs>
+		<image>textures/store_silage_r.dds</image>
+		<price>15200</price>
+		<dailyUpkeep>0</dailyUpkeep>
+		<rotation>0</rotation>
+		<brand>LIZARD</brand>
+		<category>pallets</category>
+	</storeData>
+	
+    <filename>stack_round_8.i3d</filename>
+
+    <size width="2.7" length="2.7"/>
+	
+	<stack baleFilename="$data/objects/roundbales/roundbaleSilage_w112_d130.i3d" fillLevel="4000" isWrapped="true">
+		<bale index="0>0|0|0" />
+		<bale index="0>0|0|1" />
+		<bale index="0>0|0|2" />
+		<bale index="0>0|0|3" />
+		<bale index="0>0|1|0" />
+		<bale index="0>0|1|1" />
+		<bale index="0>0|1|2" />
+		<bale index="0>0|1|3" />
+	</stack>
+    
+    <components count="1">
+        <component1 centerOfMass="0 0 0" solverIterationCount="10" />
+    </components>
+	
+</vehicle>
