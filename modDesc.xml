@@ -31,6 +31,10 @@
 	<inputBindings>
     </inputBindings>
 
+     <extraSourceFiles>
+        <sourceFile filename="scripts/leasefix.lua" />
+    </extraSourceFiles>
+
 	<specializations>
 		<specialization name="bale_spawner" className="BaleSpawner" filename="scripts/balespawn.lua" />
 	</specializations>
