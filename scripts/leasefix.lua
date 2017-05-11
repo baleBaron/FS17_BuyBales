@@ -7,21 +7,21 @@
 -- By: baron <mve.karlsson@gmail.com>
 --
 
-noLeaseXmlFile = { g_currentModDirectory .. "stack_round_8_hay.xml", 
-                   g_currentModDirectory .. "stack_round_8_silage.xml",
-                   g_currentModDirectory .. "stack_round_8_straw.xml",
-                   g_currentModDirectory .. "stack_square_8_hay.xml",
-                   g_currentModDirectory .. "stack_square_8_straw.xml"
+buyBalesXmlFile = { g_currentModDirectory .. "stack_round_8_hay.xml", 
+                    g_currentModDirectory .. "stack_round_8_silage.xml",
+                    g_currentModDirectory .. "stack_round_8_straw.xml",
+                    g_currentModDirectory .. "stack_square_8_hay.xml",
+                    g_currentModDirectory .. "stack_square_8_straw.xml"
                  }
 
 NoBaleLease = {}
 addModEventListener(NoBaleLease)
 
 function NoBaleLease:loadMap()
-    ShopScreen.onBuy        = Utils.overwrittenFunction(ShopScreen.onBuy,       NoBaleLease.onBuy)
-    ShopScreen.onYesNoBuyObject = Utils.overwrittenFunction(ShopScreen.onYesNoBuyObject, NoBaleLease.onYesNoBuyObject)
+    ShopScreen.onBuy            = Utils.overwrittenFunction(ShopScreen.onBuy,           NoBaleLease.onBuy)
+    ShopScreen.onYesNoBuyObject = Utils.overwrittenFunction(ShopScreen.onYesNoBuyObject,NoBaleLease.onYesNoBuyObject)
 
-    for _, xmlFile in pairs(noLeaseXmlFile) do
+    for _, xmlFile in pairs(buyBalesXmlFile) do
         local item = StoreItemsUtil.storeItemsByXMLFilename[string.lower(xmlFile)]
         
         if item ~= nil then
