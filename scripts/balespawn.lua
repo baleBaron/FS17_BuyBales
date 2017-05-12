@@ -13,10 +13,10 @@ function BaleSpawner:new(isServer, isClient, customMt)
     if mt == nil then
         mt = BaleSpawner_mt
     end
-    
+
     local self = Object:new(isServer, isClient, mt)
     registerObjectClassName(self, "BaleSpawner")
-    
+
     return self
 end
 
@@ -25,7 +25,7 @@ function BaleSpawner:delete()
     BaleSpawner:superClass().delete(self)
 end
 
-function BaleSpawner:load(_ , x, y, z, rx, ry, rz, xmlFilename)
+function BaleSpawner:load(_, x, y, z, rx, ry, rz, xmlFilename)
     local _, baseDirectory = getModNameAndBaseDirectory(xmlFilename)
     local xmlFile = loadXMLFile("tempObjectXML", xmlFilename)
 
@@ -47,7 +47,7 @@ function BaleSpawner:load(_ , x, y, z, rx, ry, rz, xmlFilename)
         local stackTransform = createTransformGroup("stackTransform")
 
         setTranslation(stackTransform, x, y, z)
-        setRotation(stackTransform,rx,ry,rz)
+        setRotation(stackTransform, rx, ry, rz)
         link(stackTransform,stackNode)
 
         delete(stackRoot)
