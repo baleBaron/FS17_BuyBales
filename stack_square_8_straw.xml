@@ -3,8 +3,8 @@
 
 	<storeData>
 		<name>
-			<en>Stack of straw bales</en>
-			<de>Stapel von strohballen</de>
+			<en>Straw bales</en>
+			<de>Strohballen</de>
 		</name>
 		<functions>
 			<function>$l10n_function_bale_stack</function>

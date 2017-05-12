@@ -3,8 +3,8 @@
 
 	<storeData>
 		<name>
-			<en>Stack of silage bales</en>
-			<de>Stapel von silageballen</de>
+			<en>Silage bales</en>
+			<de>Silageballen</de>
 		</name>
 		<functions>
 			<function>$l10n_function_bale_stack</function>
