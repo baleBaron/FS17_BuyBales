@@ -31,15 +31,9 @@
 	<inputBindings>
     </inputBindings>
 
-	<specializations>
-		<specialization name="bale_spawner" className="BaleSpawner" filename="scripts/balespawn.lua" />
-	</specializations>
-	
-	<vehicleTypes>
-		<type name="bale_stack" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
-			<specialization name="bale_spawner" />
-		</type>
-	</vehicleTypes>
+	<extraSourceFiles>
+		<sourceFile filename="scripts/balespawn.lua" />
+	</extraSourceFiles>
 	
 	<storeItems>
         <storeItem rootNode="stack_obj" xmlFilename="stack_square_8_straw.xml" />

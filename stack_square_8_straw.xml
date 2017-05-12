@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<vehicle type="bale_stack">
-
+<object>
 	<storeData>
 		<name>
 			<en>Stack of straw bales</en>
@@ -19,10 +18,11 @@
 		<rotation>0</rotation>
 		<brand>LIZARD</brand>
 		<category>pallets</category>
+        <species>object</species>
 	</storeData>
 	
+    <className>BaleSpawner</className>
     <filename>stack_square_8.i3d</filename>
-
     <size width="2.5" length="2.5"/>
 	
 	<stack baleFilename="$data/objects/squarebales/baleStraw240.i3d" fillLevel="4000">
@@ -35,9 +35,4 @@
 		<bale index="0>0|3|0" />
 		<bale index="0>0|3|1" />
 	</stack>
-    
-    <components count="1">
-        <component1 centerOfMass="0 0 0" solverIterationCount="10" />
-    </components>
-	
-</vehicle>
+</object>
