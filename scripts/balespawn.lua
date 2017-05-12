@@ -8,8 +8,6 @@ BaleSpawner = {}
 BaleSpawner_mt = Class(BaleSpawner, Object)
 getfenv(0)["BaleSpawner"] = BaleSpawner
 
-InitObjectClass(BaleSpawner, "BaleSpawner")
-
 function BaleSpawner:new(isServer, isClient, customMt)
     local mt = customMt
     if mt == nil then
