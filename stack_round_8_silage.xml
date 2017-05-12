@@ -4,6 +4,7 @@
 		<name>
 			<en>Silage bales</en>
 			<de>Silageballen</de>
+            <fr>Ballots de silage</fr>
 		</name>
 		<functions>
 			<function>$l10n_function_bale_stack</function>

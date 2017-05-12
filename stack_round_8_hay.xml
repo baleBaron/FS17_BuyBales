@@ -4,6 +4,7 @@
 		<name>
 			<en>Hay bales</en>
 			<de>Heuballen</de>
+            <fr>Ballots de foin</fr>
 		</name>
 		<functions>
 			<function>$l10n_function_bale_stack</function>

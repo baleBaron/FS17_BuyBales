@@ -4,6 +4,7 @@
 		<name>
 			<en>Straw bales</en>
 			<de>Strohballen</de>
+            <fr>Ballots de paille</fr>
 		</name>
 		<functions>
 			<function>$l10n_function_bale_stack</function>
