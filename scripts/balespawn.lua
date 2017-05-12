@@ -30,6 +30,8 @@ function BaleSpawner:load(_ , x, y, z, rx, ry, rz, xmlFilename)
     local xmlFile = loadXMLFile("tempObjectXML", xmlFilename)
 
     if xmlFile ~= nil then
+        local isSuccess = true
+
         -- load xml parameters
         local stackI3DFilename 
         local baleParam = {}
@@ -53,24 +55,32 @@ function BaleSpawner:load(_ , x, y, z, rx, ry, rz, xmlFilename)
         -- spawn this stack of bales
         local i = 0
         while true do
-            local key = "object.stack.bale("..tostring(i)..")"
-            if hasXMLProperty(xmlFile, key) then
-                local baleNode = Utils.indexToObject(stackNode,getXMLString(xmlFile, key.."#index"));
-                local x, y, z = getWorldTranslation(baleNode)
-                local rx, ry, rz = getWorldRotation(baleNode)
-                
-                local baleObject = Bale:new(self.isServer, self.isClient)
-                baleObject:load(baleParam.baleFilename, x, y, z, rx, ry, rz, baleParam.fillLevel)
-                baleObject:register()
-                
-                baleObject.isBuyBale = true -- flag this bale as purchased
-                
-                if baleParam.isWrapped then
-                    baleObject:setWrappingState(1)
+            if g_currentMission:getCanAddLimitedObject(FSBaseMission.LIMITED_OBJECT_TYPE_BALE) then
+                local key = "object.stack.bale("..tostring(i)..")"
+
+                if hasXMLProperty(xmlFile, key) then
+                    local baleNode = Utils.indexToObject(stackNode,getXMLString(xmlFile, key.."#index"));
+                    local x, y, z = getWorldTranslation(baleNode)
+                    local rx, ry, rz = getWorldRotation(baleNode)
+
+                    local baleObject = Bale:new(self.isServer, self.isClient)
+                    baleObject:load(baleParam.baleFilename, x, y, z, rx, ry, rz, baleParam.fillLevel)
+                    baleObject:register()
+
+                    baleObject.isBuyBale = true
+
+                    if baleParam.isWrapped then
+                        baleObject:setWrappingState(1)
+                    end
+
+                    i = i + 1
+                else
+                    break
                 end
-                
-                i = i + 1
             else
+                print("BaleSpawner:load(): Bale could not be spawned, limit reached.")
+                isSuccess = false
+
                 break
             end
         end
@@ -81,7 +91,7 @@ function BaleSpawner:load(_ , x, y, z, rx, ry, rz, xmlFilename)
 
         Utils.releaseSharedI3DFile(stackI3DFilename, nil, true)
 
-        return true
+        return isSuccess
     end
 
     return false
