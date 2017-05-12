@@ -22,7 +22,7 @@
 	<l10n>
 		<text name="function_bale_stack">
             <en>Stack of bales delivered to the store.</en>
-			<de>Stapel von Ballen an den Maschinenhandler geliefert.</de>   <!-- Google translate -->
+			<de>Stapel von Ballen an den Maschinenhändler geliefert.</de>   <!-- Google translate -->
             <fr>Pile de balles livrées au distributeur.</fr>                <!-- Google translate -->
         </text>
 	</l10n>
