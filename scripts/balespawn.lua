@@ -1,7 +1,7 @@
 --
 --	BaleSpawner object
 --
--- 	By: baron (mve.karlsson@gmail.com)
+-- 	By: baron <mve.karlsson@gmail.com>
 --
 
 BaleSpawner = {}
