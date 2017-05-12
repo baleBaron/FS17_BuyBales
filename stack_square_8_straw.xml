@@ -11,7 +11,7 @@
 		</functions>
 		<specs>
 			<fillTypes>straw</fillTypes>
-			<capacity unit="$l10n_unit_liter">8x4000</capacity>
+			<capacity unit="$l10n_unit_pieces">8</capacity>
 		</specs>
 		<image>textures/store_straw.dds</image>
 		<price>5200</price>

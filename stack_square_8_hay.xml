@@ -11,7 +11,7 @@
 		</functions>
 		<specs>
 			<fillTypes>dryGrass_windrow</fillTypes>
-			<capacity unit="$l10n_unit_liter">8x4000</capacity>
+			<capacity unit="$l10n_unit_pieces">8</capacity>
 		</specs>
 		<image>textures/store_hay.dds</image>
 		<price>8300</price>
