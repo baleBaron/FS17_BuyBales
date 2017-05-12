@@ -2,16 +2,16 @@
 <modDesc descVersion="37">
 
     <author>baron</author>
-    <version>1.0.0.1</version>
+    <version>1.0.0.0</version>
 	
     <title>
-		<en>BuyBales</en>
-		<de>KaufenBallen</de>
+		<en>Buy Bales</en>
     </title>
 	
     <description>
 		<en><![CDATA[Enables you to pruchase bales at the store.]]></en>
-		<de><![CDATA[Hiermit können Sie Ballen im Laden zu kaufen.]]></de>
+		<de><![CDATA[Ermöglicht es Ihnen Ballen am Maschinenhändler zu kaufen.]]></de>  <!-- Google translate -->
+        <fr><![CDATA[Permet d'acheter des balles au distributeur.]]></fr>               <!-- Google translate -->
     </description>
 
     <iconFilename>textures/icon.dds</iconFilename>
@@ -20,7 +20,8 @@
 	<l10n>
 		<text name="function_bale_stack">
             <en>Stack of bales delivered to the store.</en>
-			<de>Stapel von Ballen in den Laden geliefert.</de>
+			<de>Stapel von Ballen an den Maschinenhandler geliefert.</de>   <!-- Google translate -->
+            <fr>Pile de balles livrées au distributeur.</fr>                <!-- Google translate -->
         </text>
 	</l10n>
 	
