@@ -11,9 +11,9 @@
     </title>
 	
     <description>
-		<en><![CDATA[Enables you to purchase bales at the store.]]></en>
-		<de><![CDATA[Ermöglicht es Ihnen Ballen am Maschinenhändler zu kaufen.]]></de>  <!-- Google translate -->
-        <fr><![CDATA[Permet d'acheter des balles au distributeur.]]></fr>               <!-- Google translate -->
+		<en><![CDATA[Enables you to purchase bales at the store. (category: pallets)]]></en>
+		<de><![CDATA[Ermöglicht es Ihnen Ballen am Maschinenhändler zu kaufen. (Kategorie: Paletten)]]></de>  <!-- Google translate -->
+        <fr><![CDATA[Permet d'acheter des balles au distributeur. (catégorie: palettes)]]></fr>               <!-- Google translate -->
     </description>
 
     <iconFilename>textures/icon.dds</iconFilename>
