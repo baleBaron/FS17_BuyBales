@@ -2,8 +2,8 @@
 <object>
 	<storeData>
 		<name>
-			<en>Stack of hay bales</en>
-			<de>Stapel von heuballen</de>
+			<en>Hay bales</en>
+			<de>Heuballen</de>
 		</name>
 		<functions>
 			<function>$l10n_function_bale_stack</function>
