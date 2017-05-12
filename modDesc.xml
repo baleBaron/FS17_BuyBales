@@ -2,7 +2,7 @@
 <modDesc descVersion="37">
 
     <author>baron</author>
-    <version>1.0.0.1/version>
+    <version>1.0.0.1</version>
 	
     <title>
 		<en>BuyBales</en>
@@ -14,11 +14,7 @@
 		<de><![CDATA[Hiermit können Sie Ballen im Laden zu kaufen.]]></de>
     </description>
 
-    <iconFilename>
-		<en>textures/store.dds</en>
-		<de>textures/store.dds</de>
-    </iconFilename>	
-	
+    <iconFilename>textures/icon.dds</iconFilename>
     <multiplayer supported="true"/>
 	
 	<l10n>
