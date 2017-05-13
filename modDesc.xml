@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="37">
-
     <author>baron</author>
     <version>1.0.0.0</version>
-	
     <title>
 		<en>Buy Bales</en>
         <de>Buy Bales</de>
         <fr>Buy Bales</fr>
     </title>
-	
     <description>
 		<en><![CDATA[Enables you to purchase bales at the store. (category: pallets)]]></en>
 		<de><![CDATA[Ermöglicht es Ihnen Ballen am Maschinenhändler zu kaufen. (Kategorie: Paletten)]]></de>  <!-- Google translate -->
         <fr><![CDATA[Permet d'acheter des balles au distributeur. (catégorie: palettes)]]></fr>               <!-- Google translate -->
     </description>
-
     <iconFilename>textures/icon.dds</iconFilename>
     <multiplayer supported="true"/>
-	
+
+	<extraSourceFiles>
+		<sourceFile filename="scripts/balespawn.lua" />
+	</extraSourceFiles>
+
 	<l10n>
 		<text name="function_bale_stack">
             <en>Stack of bales delivered to the store.</en>
@@ -26,14 +26,7 @@
             <fr>Pile de balles livrées au distributeur.</fr>                        <!-- Google translate -->
         </text>
 	</l10n>
-	
-	<inputBindings>
-    </inputBindings>
 
-	<extraSourceFiles>
-		<sourceFile filename="scripts/balespawn.lua" />
-	</extraSourceFiles>
-	
 	<storeItems>
         <storeItem rootNode="stack_obj" xmlFilename="stack_square_8_straw.xml" />
 		<storeItem rootNode="stack_obj" xmlFilename="stack_round_8_straw.xml" />
@@ -41,5 +34,4 @@
 		<storeItem rootNode="stack_obj" xmlFilename="stack_round_8_hay.xml" />
 		<storeItem rootNode="stack_obj" xmlFilename="stack_round_8_silage.xml" />
 	</storeItems>
-	
 </modDesc>
