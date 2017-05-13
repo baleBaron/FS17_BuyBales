@@ -30,7 +30,7 @@ function BaleSpawner:load(_, x, y, z, rx, ry, rz, xmlFilename)
     local xmlFile = loadXMLFile("tempObjectXML", xmlFilename)
 
     if xmlFile ~= nil then
-        local isSuccess = true
+        local isSpawned = true
 
         -- load xml parameters
         local stackI3DFilename 
@@ -53,6 +53,7 @@ function BaleSpawner:load(_, x, y, z, rx, ry, rz, xmlFilename)
         delete(stackRoot)
 
         -- spawn this stack of bales
+        local spawnedBales = {}
         local i = 0
         while true do
             local key = "object.stack.bale("..tostring(i)..")"
@@ -60,8 +61,11 @@ function BaleSpawner:load(_, x, y, z, rx, ry, rz, xmlFilename)
             if not hasXMLProperty(xmlFile, key) then
                 break
             elseif not g_currentMission:getCanAddLimitedObject(FSBaseMission.LIMITED_OBJECT_TYPE_BALE) then
-                print("BaleSpawner:load(): Bale could not be spawned, limit reached.")
-                isSuccess = false
+                for _, bale in pairs(spawnedBales) do
+                    bale:delete()
+                end
+                
+                isSpawned = false
                 break
             else
                 local baleNode = Utils.indexToObject(stackNode,getXMLString(xmlFile, key.."#index"));
@@ -71,13 +75,11 @@ function BaleSpawner:load(_, x, y, z, rx, ry, rz, xmlFilename)
                 local baleObject = Bale:new(self.isServer, self.isClient)
                 baleObject:load(baleParam.baleFilename, x, y, z, rx, ry, rz, baleParam.fillLevel)
                 baleObject:register()
-
+                baleObject:setWrappingState(baleParam.isWrapped and 1 or 0)
                 baleObject.isBuyBale = true
 
-                if baleParam.isWrapped then
-                    baleObject:setWrappingState(1)
-                end
-
+                table.insert(spawnedBales,baleObject)
+                
                 i = i + 1
             end
         end
@@ -85,10 +87,9 @@ function BaleSpawner:load(_, x, y, z, rx, ry, rz, xmlFilename)
         -- cleanup
         delete(xmlFile)
         delete(stackTransform)
-
         Utils.releaseSharedI3DFile(stackI3DFilename, nil, true)
 
-        return isSuccess
+        return isSpawned
     end
 
     return false
